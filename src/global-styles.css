@@ -37,5 +37,6 @@ main {
   img {
     max-width: 100%;
     aspect-ratio: inherit;
+    transition: transform 0.3s ease;
   }
 }
