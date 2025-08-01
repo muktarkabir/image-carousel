@@ -25,6 +25,9 @@ nextButton.addEventListener("click", () => {
   if (currentPictureNumber < numberOfPictures - 1) {
     currentPictureNumber += 1;
     slide(currentPictureNumber);
+  } else if (currentPictureNumber == numberOfPictures - 1) {
+    currentPictureNumber = 0;
+    slide(currentPictureNumber);
   }
 });
 
@@ -38,6 +41,9 @@ previousButton.addEventListener("click", () => {
 setInterval(() => {
   if (currentPictureNumber < numberOfPictures - 1) {
     currentPictureNumber += 1;
+    slide(currentPictureNumber);
+  } else if (currentPictureNumber == numberOfPictures - 1) {
+    currentPictureNumber = 0;
     slide(currentPictureNumber);
   }
 }, 5000);
