@@ -25,6 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 main {
@@ -39,5 +40,28 @@ main {
     max-width: 100%;
     aspect-ratio: inherit;
     transition: transform 0.3s ease;
+  }
+}
+aside{
+  width: clamp(300px,500px,700px);
+  height: 30px;
+  position: relative;
+  display: flex;
+
+  button{
+    max-width: 20%;
+  }
+
+  /* .next{
+    position: absolute;
+    right: 0%;
+  }
+  .previous{
+    position: absolute;
+    left: 0%;
+  } */
+  nav{
+    width: 80%;
+    border: 1px solid green;
   }
 }
