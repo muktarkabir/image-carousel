@@ -5,6 +5,7 @@ import images from "./modules/images.js";
 const carouselFrame = document.querySelector("main");
 const nextButton = document.querySelector("button.next");
 const previousButton = document.querySelector("button.previous");
+const navLinks = document.querySelector("aside nav");
 const numberOfPictures = images.length;
 let currentPictureNumber = 0;
 
@@ -12,6 +13,8 @@ images.forEach((image) => {
   const picture = document.createElement("img");
   picture.setAttribute("src", image);
   carouselFrame.append(picture);
+  const span = document.createElement("div");
+  navLinks.append(span);
 });
 
 const slide = (number) => {
