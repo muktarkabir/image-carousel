@@ -34,3 +34,10 @@ previousButton.addEventListener("click", () => {
     slide(currentPictureNumber);
   }
 });
+
+setInterval(() => {
+  if (currentPictureNumber < numberOfPictures - 1) {
+    currentPictureNumber += 1;
+    slide(currentPictureNumber);
+  }
+}, 5000);
