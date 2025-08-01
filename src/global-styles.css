@@ -31,7 +31,7 @@ body {
 }
 
 main {
-  width: clamp(300px, 500px, 700px);
+  width: min(90%,500px);
   aspect-ratio: 1/1;
   margin: 8px;
   display: flex;
@@ -45,7 +45,7 @@ main {
   }
 }
 aside{
-  width: clamp(300px,500px,700px);
+   width: min(90%,500px);
   height: 30px;
   position: relative;
   display: flex;
