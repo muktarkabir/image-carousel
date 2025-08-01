@@ -30,10 +30,11 @@ body {
 main {
   width: clamp(300px, 500px, 700px);
   aspect-ratio: 1/1;
-  border: 1px solid black;
   margin: 8px;
+  display: flex;
+  overflow: hidden;
 
-  img{
+  img {
     max-width: 100%;
     aspect-ratio: inherit;
   }
