@@ -69,9 +69,12 @@ aside{
       cursor: pointer;
 
       &:hover{
-        background-color: var(--primary);
+        background-color: var(--divider);
       }
     }
   }
 
+}
+.active{
+  background-color: var(--primary);
 }

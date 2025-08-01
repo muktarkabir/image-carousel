@@ -15,12 +15,20 @@ images.forEach((image) => {
   carouselFrame.append(picture);
   const span = document.createElement("div");
   navLinks.append(span);
+  navLinks.childNodes[0].classList.add("active");
 });
 
 const slide = (number) => {
   const images = carouselFrame.querySelectorAll("img");
   images.forEach((image) => {
     image.style.transform = `translateX(-${number * 100}%)`;
+  });
+  navLinks.childNodes.forEach((link, index) => {
+    if (index == number) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
   });
 };
 
