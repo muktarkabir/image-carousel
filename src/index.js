@@ -9,11 +9,12 @@ const navLinks = document.querySelector("aside nav");
 const numberOfPictures = images.length;
 let currentPictureNumber = 0;
 
-images.forEach((image) => {
+images.forEach((image, index) => {
   const picture = document.createElement("img");
   picture.setAttribute("src", image);
   carouselFrame.append(picture);
   const span = document.createElement("div");
+  span.dataset.index = index;
   navLinks.append(span);
   navLinks.childNodes[0].classList.add("active");
 });
@@ -45,6 +46,13 @@ nextButton.addEventListener("click", () => {
 previousButton.addEventListener("click", () => {
   if (currentPictureNumber > 0) {
     currentPictureNumber -= 1;
+    slide(currentPictureNumber);
+  }
+});
+
+navLinks.addEventListener("click", (e) => {
+  if (e.target instanceof HTMLDivElement) {
+    currentPictureNumber = Number.parseInt(e.target.dataset.index);
     slide(currentPictureNumber);
   }
 });
